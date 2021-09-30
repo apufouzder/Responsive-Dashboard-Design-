@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(45deg, #009688, #9e14b5);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.navigation.active {
+  width: 60px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+.navigation ul li:hover {
+  background: linear-gradient(45deg, #9c27b0, #2196f3);
+  border-radius: 40px 0px 0px 40px;
+}
+.navigation ul li:nth-child(1):hover {
+  background: transparent;
+}
+
+.navigation ul li a {
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  display: flex;
+  color: #fff;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.navigation ul li a .icon .fa {
+  color: #fff;
+  font-size: 24px;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+/* Main section */
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  height: 100vh;
+  background: #f5f5f5;
+  transition: 0.5s;
+}
+
+.main.active {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+.main .topBar {
+  width: 100%;
+  background: #fff;
+  height: 60px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: "\f0c9";
+  position: absolute;
+  font-family: fontAwesome;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  font-size: 24px;
+  text-align: center;
+  color: #111;
+}
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+
+.search label input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  border-radius: 40px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.search label .fa {
+  position: absolute;
+  left: 15px;
+  top: 4px;
+}
+
+.user {
+  position: relative;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* cardbox */
+.cardbox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.cardbox .card {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 2px 12px 1px #e5e5e5;
+  cursor: pointer;
+}
+
+.cardbox .card .numbers {
+  position: relative;
+  font-size: 2em;
+  font-weight: 500;
+}
+.cardbox .card .iconBox {
+  font-size: 2.5em;
+  color: #971ab3;
+}
+
+/* details */
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+.details .recentOrders {
+  position: relative;
+  min-height: 530px;
+  background: #fff;
+  padding: 20px;
+  line-height: 1.8;
+  box-shadow: 0px 2px 12px 1px #e5e5e5;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cardHeader h2 {
+  font-weight: 600;
+}
+.cardHeader .fa {
+  font-size: 21px;
+  position: relative;
+  top: 2px;
+}
+.btn {
+  position: relative;
+  padding: 5px 10px;
+  background: #971ab3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.details table thead td {
+  font-weight: 600;
+}
+
+.details .recentOrders table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.details .recentOrders table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .recentOrders table tbody tr:hover {
+  background: #e4dde2;
+  /* color: #fff; */
+}
+
+.details .recentOrders table tr td {
+  padding: 9px 5px;
+}
+
+.status {
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+.delivered {
+  background: #14e701;
+}
+.pending {
+  background: #ebe700;
+}
+.return {
+  background: #f54600;
+}
+.inprogress {
+  background: #ee02b3;
+}
+
+.details .recentCustomers {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0px 2px 12px 1px #e5e5e5;
+}
+
+.client-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.client-box img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}

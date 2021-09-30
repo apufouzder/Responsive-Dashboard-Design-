@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard Design!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="container">
+            <div class="navigation" onclick="toggleMenu()">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-apple" aria-hidden="true"></i></span>
+                            <span class="title">
+                                <h2>Brand New</h2>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span class="title">Customer's</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-commenting" aria-hidden="true"></i></span>
+                            <span class="title">Message</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-question" aria-hidden="true"></i></span>
+                            <span class="title">Help</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                            <span class="title">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                            <span class="title">Password</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                            <span class="title">Sing Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main">
+                <div class="topBar">
+                    <div class="toggle" onclick="toggleMenu()"></div>
+                    <div class="search">
+                        <label>
+                            <input type="text" placeholder="Search here">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="user">
+                        <img src="./icons/pic-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="cardbox">
+                    <div class="card">
+                        <div>
+                            <div class="numbers">1,265</div>
+                            <div class="cardName">Daily Views</div>
+                        </div>
+                        <div class="iconBox">
+                            <i class="fa fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbers">90</div>
+                            <div class="cardName">Sales</div>
+                        </div>
+                        <div class="iconBox">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbers">190</div>
+                            <div class="cardName">Comments</div>
+                        </div>
+                        <div class="iconBox">
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbers">$8,169</div>
+                            <div class="cardName">Earning</div>
+                        </div>
+                        <div class="iconBox">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Details box -->
+                <div class="details">
+                    <div class="recentOrders">
+                        <div class="cardHeader">
+                            <h2>Recent Orders</h2>
+                            <a href="#" class="btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Price</td>
+                                    <td>Payment</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Star Refrigerator</td>
+                                    <td>$1200</td>
+                                    <td>paid</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Window Coolers</td>
+                                    <td>$150</td>
+                                    <td>Due</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Speakers</td>
+                                    <td>$960</td>
+                                    <td>Paid</td>
+                                    <td><span class="status return">Return</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Hp Laptop</td>
+                                    <td>$5000</td>
+                                    <td>Due</td>
+                                    <td><span class="status inprogress">In Progress</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Star Refrigerator</td>
+                                    <td>$1200</td>
+                                    <td>paid</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Window Coolers</td>
+                                    <td>$150</td>
+                                    <td>Due</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Speakers</td>
+                                    <td>$960</td>
+                                    <td>Paid</td>
+                                    <td><span class="status return">Return</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Hp Laptop</td>
+                                    <td>$5000</td>
+                                    <td>Due</td>
+                                    <td><span class="status inprogress">In Progress</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="recentCustomers">
+                        <div class="cardHeader1">
+                            <h2>Recent Customers</h2>
+                            <div class="box-wrapper">
+                                <div class="client-box">
+                                    <div>
+                                        <img src="./icons/pic-1.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span>Thomas Charles</span>
+                                    </div>
+                                </div>
+                                <div class="client-box">
+                                    <div>
+                                        <img src="./icons/pic-2.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span>William Joseph</span>
+                                    </div>
+                                </div>
+                                <div class="client-box">
+                                    <div>
+                                        <img src="./icons/pic-3.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span>Steven Edward</span>
+                                    </div>
+                                </div>
+                                <div class="client-box">
+                                    <div>
+                                        <img src="./icons/pic-4.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span>Kenneth Richard</span>
+                                    </div>
+                                </div>
+                                <div class="client-box">
+                                    <div>
+                                        <img src="./icons/pic-1.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span>Thomas Charles</span>
+                                    </div>
+                                </div>
+                                <div class="client-box">
+                                    <div>
+                                        <img src="./icons/pic-2.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span>William Joseph</span>
+                                    </div>
+                                </div>
+                                <div class="client-box">
+                                    <div>
+                                        <img src="./icons/pic-3.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span>Steven Edward</span>
+                                    </div>
+                                </div>
+                                <div class="client-box">
+                                    <div>
+                                        <img src="./icons/pic-4.png" alt="">
+                                    </div>
+                                    <div>
+                                        <span>Kenneth Richard</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleMenu() {
+            let toggle = document.querySelector(".toggle");
+            let navigation = document.querySelector(".navigation");
+            let main = document.querySelector(".main");
+
+            toggle.classList.toggle("active")
+            navigation.classList.toggle("active")
+            main.classList.toggle("active")
+        }
+    </script>
+</body>
+
+</html>
