@@ -254,6 +254,22 @@ body {
   border-bottom: none;
 }
 
+.details .recentOrders table thead tr td:last-child,
+.details .recentOrders table tbody tr td:last-child {
+  text-align: right;
+}
+
+.details .recentOrders table thead tr td:nth-child(2),
+.details .recentOrders table tbody tr td:nth-child(2) {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.details .recentOrders table thead tr td:nth-child(3),
+.details .recentOrders table tbody tr td:nth-child(3) {
+  text-align: center;
+}
+
 .details .recentOrders table tr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -271,7 +287,9 @@ body {
   padding: 5px;
   border-radius: 5px;
   color: #fff;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 .delivered {
   background: #14e701;
@@ -304,4 +322,72 @@ body {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    left: 0;
+    width: 300px;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    width: calc(100% - 300px);
+    left: 300px;
+  }
+  .cardbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardHeader h2,
+  .cardHeader1 h2 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardbox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .details .recentOrders {
+    overflow-x: auto;
+  }
+  .details .recentOrders table {
+    width: 600px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle.active {
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    left: initial;
+  }
+  .toggle.active::before {
+    color: #fff;
+  }
+  .main,
+  .main.active {
+    width: 100%;
+    left: 0;
+  }
 }
